@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-box">
+      <img src="logo_0.36571100 1592896939.png" alt="" class="avatar" />
+
+      <div class="dropdown">
+        <select
+          name="role"
+          id="role"
+          placeholder="Role"
+          class="dropbtn"
+          aria-required="true"
+        >
+          <option value="">Role</option>
+          <option value="Distributor">Distributor</option>
+          <option value="Dealer">Dealer</option>
+          <option value="professional">Professional</option>
+          <option value="student">Student</option>
+          <option value="Carpenter">Carpenter</option>
+        </select>
+      </div>
+
+      <div class="tab-content">
+        <form class="form" id="login">
+          <div class="form__message form__message--error"></div>
+          <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input
+              type="text"
+              id="username"
+              autofocus
+              placeholder="User id"
+              name=""
+              value=""
+            />
+          </div>
+
+          <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              name=""
+              value=""
+            />
+          </div>
+
+          <div class="remember_me">
+            <input type="checkbox" id="remember_me" />
+            <label for="remember_me">Remember me</label>
+          </div>
+
+          <p class="form__text">
+            <a href="#" class="form__link">Forgot password</a>
+          </p>
+
+          <p class="form__text">
+            <a id="linkCreateAccount" href="./" class="form__link"
+              >Don't have an account? Create account</a
+            >
+          </p>
+
+          <button class="btn" type="submit">
+            <b>Sign-In</b>
+          </button>
+          <p class="form__text">
+            <a id="" href="./" class="form__assistance"
+              >Contact for Assistance</a
+            >
+          </p>
+        </form>
+        <form class="form form--hidden" id="createAccount">
+          <div class="form__message form__message--error"></div>
+          <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input
+              type="text"
+              autofocus
+              placeholder="Name"
+              class="form__input"
+              name=""
+              value=""
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+
+          <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input
+              type="email"
+              id="signupUsername"
+              placeholder="Email"
+              class="form__input"
+              name=""
+              value=""
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+
+          <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              class="form__input"
+              name=""
+              value=""
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+
+          <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input
+              type="number"
+              placeholder="Phone Number"
+              class="form__input"
+              name=""
+              value=""
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+
+          <p class="form__text">
+            <a id="linklogin" href="./" class="form__link"
+              >Already have an account ?</a
+            >
+          </p>
+
+          <button class="btn" type="submit">
+            <b>Sign-Up</b>
+          </button>
+
+          <p class="form__text">
+            <a id="" href="./" class="form__assistance"
+              >Contact for Assistance</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("login");
+      form.addEventListener("submit", registerUser);
+
+      async function registerUser(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const result = await fetch("/api/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+          }),
+        }).then((res) => res.json());
+      }
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

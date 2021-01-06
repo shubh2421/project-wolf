@@ -1,0 +1,209 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: whitesmoke;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.avatar{
+    width: 250px;
+    height: 95px;
+    
+    position: absolute;
+    top: -80px;
+    margin-left: 25px;
+  
+}
+
+
+.login-box{
+    width: 320px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+
+}
+
+.login-box h1{
+    float: left;
+    font-size: 30px;
+    border-bottom: 6px solid rgb(10, 193, 139);
+    margin-bottom: 50px;
+    padding: 13px;
+}
+
+
+
+.login-box .tab-content{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+
+}
+
+.remember_me {
+    font-size: medium;
+    color: rgb(116, 116, 116);
+    margin: 6px 0px;
+    
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 20px 0;
+    transition: background 0.2s,border-color 0.2s;
+    
+    background-color: rgb(213, 212, 212);
+    border-radius: 10px;
+       
+}
+
+.textbox:focus{
+    border-color: #009579;
+    background: whitesmoke
+}
+
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+    padding-bottom: 10px;
+    
+    
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background:none;
+    color: white;
+    font-size: 18px;
+    
+    float: left;
+    margin: 0 10px;
+
+}
+
+.btn{
+    width: 70%;
+    position: center;
+    background-color:rgb(204, 204, 204);
+    border: 2px solid rgb(10, 193, 139);
+    color:rgb(57, 58, 59);
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 25px 0;
+    margin-left: 40px;
+    border-radius: 30px;
+    float: center;
+}
+
+.btn:hover{
+    background: rgb(160, 159, 159);
+
+}
+
+.btn:active{
+    transform: scale(0.97);
+}
+
+.dropbtn {
+    background-color: white;
+    color: rgb(116, 116, 116);
+    padding: 8px;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 30px;
+    width: 100%;
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 175px;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(57, 58, 59);
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+  }
+  
+  .dropdown-content a {
+    color: whitesmoke;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: rgb(199, 200, 201);}
+  .dropdown:hover .dropbtn {transition: background 0.2s, border-color 0.2s;}
+
+
+  .form__input--error{
+      color: #cc3333;
+      border-color: #cc3333;
+  }
+
+  .form__input--error-message{
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #cc3333;
+
+  }
+
+  .form__text{
+      text-align: center;
+  }
+
+  .form__link{
+      color: rgb(156, 157, 159) ;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .form__link:hover{
+      text-decoration: underline;
+
+
+  }
+
+  .form--hidden{
+      display: none;
+  }
+
+  .form__assistance{
+    color: rgb(156, 157, 159) ;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 45px;
+}
+
+.form__assistance:hover{
+    text-decoration: underline;
+}
